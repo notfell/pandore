@@ -39,6 +39,7 @@
 * Better Anti VM
 * Better CreateProcess (NtCreatePRocess, ppid spoofing)
 * Make the app more customisable
+* Better builder
 
 ### Web Panel Installation 
  - PHP 8.0
