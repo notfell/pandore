@@ -113,8 +113,8 @@ class protect : public singleton<protect>
 				{
 					if (utils::get()->get_procid(process) != 0)
 					{
-						utils::get()->self_delete();
 						printf(AY_OBFUSCATE("- process found : %s\n"), process);
+						utils::get()->self_delete();
 					}
 				}
 
@@ -184,7 +184,7 @@ class protect : public singleton<protect>
 				if (dwIsDebuggerPresent != NULL) 
 				{
 					printf(AY_OBFUSCATE("- debugger found dwIsDebuggerPresent\n"));
-					// utils::get()->self_delete();
+					utils::get()->self_delete();
 				}
 
 				STATUS = NtQueryInformationProcess(GetCurrentProcess(), (PROCESSINFOCLASS)(((5 * 2) + (25 / 5)) * 2), &hProcessDebugObject, sizeof(DWORD64), NULL);
@@ -195,7 +195,7 @@ class protect : public singleton<protect>
 				if (hProcessDebugObject != NULL) 
 				{
 					printf(AY_OBFUSCATE("- debugger found hProcessDebugObject\n"));
-					// utils::get()->self_delete();
+					utils::get()->self_delete();
 				}
 
 				Sleep(1);
@@ -230,7 +230,7 @@ class protect : public singleton<protect>
 			if (dwNumberOfDigits > 3) 
 			{
 				printf(AY_OBFUSCATE("- vm detected name\n"));
-				// utils::get()->self_delete();
+				utils::get()->self_delete();
 			}
 
 			GetSystemInfo(&SysInfo);
@@ -239,7 +239,7 @@ class protect : public singleton<protect>
 			if (SysInfo.dwNumberOfProcessors < 2)
 			{
 				printf(AY_OBFUSCATE("- vm detected cpu\n"));
-				// utils::get()->self_delete();
+				utils::get()->self_delete();
 			}
 
 			if (!GlobalMemoryStatusEx(&MemStatus))
@@ -249,7 +249,7 @@ class protect : public singleton<protect>
 			if ((DWORD)MemStatus.ullTotalPhys < (DWORD)(2 * 1073741824)) 
 			{
 				printf(AY_OBFUSCATE("- vm detected ram\n"));
-				// utils::get()->self_delete();
+				utils::get()->self_delete();
 			}
 
 			if ((RegOpenKeyExA(HKEY_LOCAL_MACHINE, "SYSTEM\\ControlSet001\\Enum\\USBSTOR", NULL, KEY_READ, &hKey)) != ERROR_SUCCESS)
@@ -262,7 +262,7 @@ class protect : public singleton<protect>
 			if (dwUsbNumber < 2) 
 			{
 				printf(AY_OBFUSCATE("- vm detected usb\n"));
-				// utils::get()->self_delete();
+				utils::get()->self_delete();
 			}
 
 			RegCloseKey(hKey);
