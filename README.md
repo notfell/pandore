@@ -1,4 +1,4 @@
-![pandore_banner](https://github.com/notfell/pandore_dev/assets/88662570/2a8fc42e-9b5b-4671-8c03-6ca40d4a98a0)
+![pandore_banner](https://github.com/notfell/pandore/assets/88662570/98a32d4a-0ce8-42d1-8e3e-8c4e15250054)
 
 [![C++](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)](https://en.wikipedia.org/wiki/C%2B%2B) 
 [![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://en.wikipedia.org/wiki/PHP) 
@@ -51,15 +51,14 @@
  - Compile the loader
  - Put pandore_app.exe in files\pandore_app.exe
 
-
 ## Demo :
 
-https://github.com/notfell/pandore_dev/assets/88662570/ab854287-1666-4155-986d-a6c84f32487d
+https://github.com/notfell/pandore/assets/88662570/efd73032-412b-4bb9-81ec-d96032ec4958
 
 ## Pictures:
 
-![landing pandore](https://github.com/notfell/pandore_dev/assets/88662570/6c0e49b0-faaf-4e0b-a790-241841022391)
-![pandore admin](https://github.com/notfell/pandore_dev/assets/88662570/15cdea93-6c66-4112-882b-07a53d58278f)
+![309917847-6c0e49b0-faaf-4e0b-a790-241841022391](https://github.com/notfell/pandore/assets/88662570/0c8da939-eece-42a0-aac0-ebd2c4aef128)
+![309920300-15cdea93-6c66-4112-882b-07a53d58278f](https://github.com/notfell/pandore/assets/88662570/d309780d-bd8a-455a-b462-546537779584)
 
 ## Disclaimer:
 
