@@ -1,0 +1,269 @@
+:root {
+    --main-color: #7C7CCD;
+    --background-color: #000000;
+    --second-background-color: #070707;
+    --text-color: #CDCDCD;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #111;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+.container {
+    min-height: 95vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper {
+    background-color: var(--second-background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--main-color);
+    width: 300px;
+    text-align: left;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+input,
+.button input {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    background-color: #101010;
+    box-shadow: 0 0 5px var(--main-color);
+    color: var(--text-color);
+    margin-bottom: 10px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--main-color);
+}
+
+.button input {
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+}
+
+.signup-link {
+    margin-top: 15px;
+    text-align: center;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.error-message {
+    color: #f84040;
+    margin-bottom: 10px;
+}
+
+.dashboard-wrapper {
+    background-color: var(--second-background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--main-color);
+    width: 45%;
+    margin: 0 auto;
+    height: 400px;
+}
+
+.dashboard-nav {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+.nav-button {
+    align-items: center;
+    text-decoration: none;
+    color: var(--main-color);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-button:hover {
+    background-color: var(--main-color);
+    color: #fff;
+}
+
+.dashboard-content {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.object-column {
+    background-color: var(--second-background-color);
+    border: 1px solid var(--main-color);
+    color: #ccc;
+    box-shadow: 0 0 10px var(--main-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    width: 85%;
+}
+
+.object-header {
+    display: flex;
+    align-items: center;
+}
+
+.object-column p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.object-column button {
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.9);
+    transition: opacity 0.25s ease;
+}
+
+.modal__bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.modal-state {
+    display: none;
+}
+
+.modal-state:checked + .modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+    top: 0;
+}
+
+.modal__inner {
+    transition: top 0.25s ease;
+    position: absolute;
+    top: -20%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    margin: auto;
+    overflow: auto;
+    background: var(--second-background-color);
+    box-shadow: 0 0 10px var(--main-color);
+    border-radius: 5px;
+    padding: 1em 2em;
+    height: 58%;
+}
+
+.modal__close {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 1.1em;
+    height: 1.1em;
+    cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 1.5em;
+    background: #ccc;
+    display: block;
+    transform: rotate(45deg);
+    left: 50%;
+    margin: -3px 0 0 -1px;
+    top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+    background: #aaa;
+}
+
+.modal__close:before {
+    transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+    .modal__inner {
+        width: 90%;
+        height: 90%;
+        box-sizing: border-box;
+    }
+}
+
+.btn {
+    cursor: pointer;
+    background: var(--main-color);
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.btn:hover,
+.btn:focus {
+    background: #6d6dbd;
+}
+
+.btn:active {
+    background: var(--main-color);
+}
