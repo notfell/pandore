@@ -6,6 +6,8 @@
 
 **A shellcode loader powered by a web panel.**
 
+**DISCLAIMER** : The public version of the project is outdated. An update was initially planned for December but had to be postponed due to unexpected constraints. I haven't had the time to work on it, but here's a sneak peek at the upcoming update: [https://pandore.fell.sh/](https://pandore.fell.sh/). There's no release date yet.
+
 ## Informations:
 
 * Made with vs2022 and cpp20 and caffeine.
